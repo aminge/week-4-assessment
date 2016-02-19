@@ -8,14 +8,14 @@ function loadAnimals(){
         type: 'GET',
         url: '/getanimals',
         success: function(data){
-            console.log(data);
             for (var i = 0; i < data.length; i++){
                 appendDom(data[i]);
             }
+        },
+        error: function(){
+            console.log("Failed to retrieve animals from database")
         }
-    })
-    // ajax call to get an array of all of the animals in the database
-    // append the animals in the array to the DOM (in the animal-list)
+    });
 }
 
 
@@ -25,8 +25,6 @@ function submitAnimal(){
     $.each($('#zoo-animal-form').serializeArray(), function(i, field){
         values[field.name] = field.value;
     });
-
-    console.log(values);
 
     $('#zoo-animal-form').find('input[type=text]').val('');
 

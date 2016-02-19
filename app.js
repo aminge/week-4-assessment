@@ -6,14 +6,6 @@ var submitanimal = require('./routes/submitanimal');
 var getanimals = require('./routes/getanimals');
 var pg = require('pg');
 
-//var connectionString = '';
-//
-//if(process.env.DATABASE_URL != undefined) {
-//    connectionString = process.env.DATABASE_URL + 'ssl';
-//} else {
-//    connectionString = 'postgres://localhost:5432/week_4_assessment';
-//}
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 

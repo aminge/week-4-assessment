@@ -8,7 +8,7 @@ var random = require('./random');
 router.get('/', function(req, res){
     var results = [];
     pg.connect(connectionString, function(err, client, done) {
-        var query = client.query('SELECT * FROM zoo_animals ORDER BY id DESC;');
+        var query = client.query('SELECT * FROM zoo_animals ORDER BY id ASC;');
 
         query.on('row', function(row) {
             results.push(row);

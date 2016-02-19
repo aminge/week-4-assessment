@@ -21,7 +21,6 @@ router.post('/', function(req, res){
                     returnAnimal = {};
                     returnAnimal.animal_type = animal_type;
                     returnAnimal.animal_amount = animal_amount;
-
                     res.send(returnAnimal);
                 }
             });
