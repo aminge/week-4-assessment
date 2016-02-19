@@ -1,0 +1,5 @@
+CREATE TABLE zoo_animals (
+id serial PRIMARY KEY,
+animal_type varchar(255) NOT NULL,
+animal_amount integer NOT NULL
+);
